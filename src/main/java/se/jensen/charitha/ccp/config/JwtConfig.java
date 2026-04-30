@@ -31,7 +31,7 @@ public class JwtConfig {
         if (keyBytes.length < HS256_MIN_KEY_BYTES) {
             throw new IllegalStateException(
                     "JWT secret is too short for HS256: " + keyBytes.length + " bytes (need at least 32). " +
-                            "Set JWT_SECRET to a longer value, e.g. `openssl rand -base64 32`."
+                            "Set JWT_SECRET to a longer value"
             );
         }
 
