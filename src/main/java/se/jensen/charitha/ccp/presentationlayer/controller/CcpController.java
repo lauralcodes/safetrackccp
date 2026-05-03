@@ -58,7 +58,7 @@ public class CcpController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdCcp);
     }
 
-    @DeleteMapping("/delete/{parameterName}")
+    @DeleteMapping("/{parameterName}")
     public ResponseEntity<Void> deleteByParameterName(@PathVariable String parameterName) {
         long deletedCount = ccpService.deleteByParameterName(parameterName);
 
