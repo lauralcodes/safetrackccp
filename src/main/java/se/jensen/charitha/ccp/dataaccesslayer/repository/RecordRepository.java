@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface RecordRepository extends JpaRepository<Record, Long> {
-    List<Record> findByParameter(String parameter);
+    List<Record> findByParameterIgnoreCase(String parameter);
 }

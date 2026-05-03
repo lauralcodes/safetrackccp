@@ -12,6 +12,7 @@ public class CcpMapper {
                 ccp.getCcpId(),
                 ccp.getParameterName(),
                 ccp.getDescription(),
+                ccp.getUnit(),
                 ccp.getMinLimit(),
                 ccp.getMaxLimit()
         );

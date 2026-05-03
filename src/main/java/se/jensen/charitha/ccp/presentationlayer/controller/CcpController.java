@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springdoc.core.annotations.ParameterObject;
 import se.jensen.charitha.ccp.businesslayer.mapper.CcpMapper;
 import se.jensen.charitha.ccp.businesslayer.service.CcpService;
 import se.jensen.charitha.ccp.presentationlayer.dto.CcpRequestDto;
@@ -27,7 +28,7 @@ public class CcpController {
     }
 
     @GetMapping("/list")
-    public ResponseEntity<Page<CcpResponseDto>> getCcp(Pageable pageable) {
+    public ResponseEntity<Page<CcpResponseDto>> getCcp(@ParameterObject Pageable pageable) {
         Page<CcpResponseDto> page = ccpService.getAllCcp(pageable)
                 .map(ccpMapper::toResponseDto);
 

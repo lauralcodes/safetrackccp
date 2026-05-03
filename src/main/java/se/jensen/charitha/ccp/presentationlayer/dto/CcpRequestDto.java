@@ -4,15 +4,17 @@ public class CcpRequestDto {
 
     private String parameterName;
     private String description;
+    private String unit;
     private int minLimit;
     private int maxLimit;
 
     public CcpRequestDto() {
     }
 
-    public CcpRequestDto(String parameterName, String description, int minLimit, int maxLimit) {
+    public CcpRequestDto(String parameterName, String description, String unit, int minLimit, int maxLimit) {
         this.parameterName = parameterName;
         this.description = description;
+        this.unit = unit;
         this.minLimit = minLimit;
         this.maxLimit = maxLimit;
     }
@@ -31,6 +33,14 @@ public class CcpRequestDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public int getMinLimit() {
