@@ -5,16 +5,18 @@ public class CcpResponseDto {
     private Long ccpId;
     private String parameterName;
     private String description;
+    private String unit;
     private int minLimit;
     private int maxLimit;
 
     public CcpResponseDto() {
     }
 
-    public CcpResponseDto(Long ccpId, String parameterName, String description, int minLimit, int maxLimit) {
+    public CcpResponseDto(Long ccpId, String parameterName, String description, String unit, int minLimit, int maxLimit) {
         this.ccpId = ccpId;
         this.parameterName = parameterName;
         this.description = description;
+        this.unit = unit;
         this.minLimit = minLimit;
         this.maxLimit = maxLimit;
     }
@@ -41,6 +43,14 @@ public class CcpResponseDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public int getMinLimit() {

@@ -16,8 +16,8 @@ public class AdminUserSeeder {
     public ApplicationRunner seedAdminUser(
             AuthUserRepository authUserRepository,
             PasswordEncoder passwordEncoder,
-            @Value("${ADMIN_USERNAME:}") String adminUsername,
-            @Value("${ADMIN_PASSWORD:}") String adminPassword
+            @Value("${ADMIN_USERNAME:${app.security.admin.username:}}") String adminUsername,
+            @Value("${ADMIN_PASSWORD:${app.security.admin.password:}}") String adminPassword
     ) {
         return args -> {
             if (adminUsername == null || adminUsername.isBlank() || adminPassword == null || adminPassword.isBlank()) {

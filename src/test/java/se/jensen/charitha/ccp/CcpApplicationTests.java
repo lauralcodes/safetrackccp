@@ -9,5 +9,5 @@ class CcpApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
+

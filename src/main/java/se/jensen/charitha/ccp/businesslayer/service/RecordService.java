@@ -40,7 +40,7 @@ public class RecordService {
     }
 
     public List<Record> findRecordsByParameter(String parameter) {
-        return recordRepository.findByParameter(parameter);
+        return recordRepository.findByParameterIgnoreCase(parameter);
     }
 
     @Transactional

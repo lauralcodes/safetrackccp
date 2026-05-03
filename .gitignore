@@ -32,8 +32,11 @@ build/
 ### VS Code ###
 .vscode/
 
+### macOS ###
+.DS_Store
+
 ### Env files (secrets) ###
 .env
 .env.*
 !.env.example
-.DS_Store
+

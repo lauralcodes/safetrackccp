@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springdoc.core.annotations.ParameterObject;
 import se.jensen.charitha.ccp.businesslayer.mapper.UserMapper;
 import se.jensen.charitha.ccp.businesslayer.service.AuthService;
 import se.jensen.charitha.ccp.businesslayer.service.UserService;
@@ -36,7 +37,7 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<UserResponseDto>> getUsers(Pageable pageable) {
+    public ResponseEntity<Page<UserResponseDto>> getUsers(@ParameterObject Pageable pageable) {
         Page<UserResponseDto> page = userService.getAllUsers(pageable)
                 .map(userMapper::toResponseDto);
 

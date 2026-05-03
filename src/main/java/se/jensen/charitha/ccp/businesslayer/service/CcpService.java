@@ -34,6 +34,7 @@ public class CcpService {
         Ccp ccp = new Ccp();
         ccp.setParameterName(requestDto.getParameterName());
         ccp.setDescription(requestDto.getDescription());
+        ccp.setUnit(requestDto.getUnit());
         ccp.setMinLimit(requestDto.getMinLimit());
         ccp.setMaxLimit(requestDto.getMaxLimit());
 
