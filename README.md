@@ -34,7 +34,7 @@ A comprehensive REST API built with Spring Boot for managing Critical Control Po
 - **Build Tool**: Maven
 - **Documentation**: SpringDoc OpenAPI
 - **Containerization**: Docker
-- **Deployment**: Koyeb (with Neon PostgreSQL)
+- **Deployment**: Render (with Neon PostgreSQL)
 
 ## Prerequisites
 
